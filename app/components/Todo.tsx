@@ -20,7 +20,7 @@ export default function Todo({
   return (
     <div
       className={`flex flex-row gap-5 justify-center items-center w-96 p-2 mb-2 ${
-        status ? "bg-green-00" : "bg-white"
+        status ? "bg-green-600" : "bg-white"
       }`}
     >
       <div className="flex w-3/4 overflow-scroll">
