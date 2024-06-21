@@ -16,9 +16,11 @@ export default function Home() {
   const [sequenceId, setSequenceId] = useState<number>(1);
 
   const createNewTodo = (title: string) => {
-    const newTodo = { id: sequenceId, title: title, status: false };
-    setSequenceId(sequenceId + 1);
-    setTodos([newTodo, ...todos]);
+    if (title.trim().length !== 0) {
+      const newTodo = { id: sequenceId, title: title, status: false };
+      setSequenceId(sequenceId + 1);
+      setTodos([newTodo, ...todos]);
+    }
   };
 
   const deleteToDo = (id: number) => {
@@ -54,19 +56,23 @@ export default function Home() {
   };
 
   return (
-    <div className="container mx-auto">
-      <h1 className="">To Do List</h1>
-      <div>{countDoneTask}</div>
-      <AddTodoForm
-        input={input}
-        setInput={setInput}
-        handleSubmitTodo={handleSubmitTodo}
-      ></AddTodoForm>
-      <TodoList
-        todos={todos}
-        finishTodo={finishTodo}
-        deleteTodo={deleteToDo}
-      ></TodoList>
+    <div className="w-full">
+      <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col gap-5 mb-12 justify-center items-center mt-12">
+          <h1 className="text-4xl font-bold text-yellow-500">To-Do List App</h1>
+          <div className="text-xp font-medium">Done: {countDoneTask}</div>
+        </div>
+        <AddTodoForm
+          input={input}
+          setInput={setInput}
+          handleSubmitTodo={handleSubmitTodo}
+        ></AddTodoForm>
+        <TodoList
+          todos={todos}
+          finishTodo={finishTodo}
+          deleteTodo={deleteToDo}
+        ></TodoList>
+      </div>
     </div>
   );
 }

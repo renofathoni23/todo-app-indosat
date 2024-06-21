@@ -13,9 +13,9 @@ export default function TodoList({
   deleteTodo,
 }: TodoListProps) {
   return (
-    <div>
+    <>
       {todos &&
-        todos.map((todo) => {
+        todos.map((todo, index) => {
           return (
             <Todo
               key={todo.id}
@@ -27,6 +27,6 @@ export default function TodoList({
             ></Todo>
           );
         })}
-    </div>
+    </>
   );
 }

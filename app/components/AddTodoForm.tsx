@@ -11,16 +11,19 @@ export default function AddTodoForm({
   handleSubmitTodo,
 }: AddTodoFormProps) {
   return (
-    <form onSubmit={handleSubmitTodo}>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        placeholder="Add your new todo"
-      ></input>
-      <button type="submit" className="bg-blue-500 text-white p-2">
-        Add Todo
-      </button>
+    <form onSubmit={handleSubmitTodo} className="mb-6">
+      <div className="flex flex-row gap-8 justify-center items-center">
+        <input
+          type="text"
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          placeholder="Play football..."
+          className="h-8 w-64 border-2 pl-2"
+        ></input>
+        <button type="submit" className="bg-yellow-500 text-white p-1">
+          Add Todo
+        </button>
+      </div>
     </form>
   );
 }
