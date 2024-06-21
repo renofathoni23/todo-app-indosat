@@ -1,3 +1,15 @@
+# To-Do List App
+
+Reno Fathoni
+
+Tech Stack: Typescript, NextJS, Tailwind CSS
+
+Live: https://todo-app-indosat.vercel.app
+
+## Things that can be improved
+
+- The UI(styling)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
