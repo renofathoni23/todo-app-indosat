@@ -20,8 +20,11 @@ export default function AddTodoForm({
           placeholder="Play football..."
           className="h-8 w-64 border-2 pl-2"
         ></input>
-        <button type="submit" className="bg-yellow-500 text-white p-1">
-          Add Todo
+        <button
+          type="submit"
+          className="bg-yellow-500 text-white p-1 pl-2 pr-2"
+        >
+          Add
         </button>
       </div>
     </form>
